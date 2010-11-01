@@ -18,14 +18,14 @@ Run the following command in your Rails.root:
 
 ===Model
 
-class Post < ActiveRecord::Base
-  validates_presence_of :title
-  trimmable_attributes :title, :comments
-end
+  class Post < ActiveRecord::Base
+    validates_presence_of :title
+    trimmable_attributes :title, :comments
+  end
 
 ====Log output: 
 
-Started POST "/posts" for 127.0.0.1 at Sun Oct 31 20:30:59 -0400 2010
+  Started POST "/posts" for 127.0.0.1 at Sun Oct 31 20:30:59 -0400 2010
   Processing by PostsController#create as HTML
   Parameters: {"commit"=>"Create Post", "post"=>{"comments"=>"    new comment goes here      ", "title"=>"New title    "}, "authenticity_token"=>"Hjd4K8op5TAY7rL4k176tVehIr6eHzuR0vtNIRMlfRU=", "utf8"=>"✓"}
   SQL (17.3ms)  INSERT INTO "posts" ("comments", "created_at", "title", "updated_at") VALUES ('new comment goes here', '2010-11-01 00:30:59.163811', 'New title', '2010-11-01 00:30:59.163811')
