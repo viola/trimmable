@@ -12,7 +12,11 @@ Trimmable lib removes leading and trailing white spaces from the AR attribute va
 
 Run the following command in your Rails.root:
 
+  Rails 2.x
   ./script/plugin install git@github.com:viola/trimmable.git
+
+  Rails 3.x
+  ./script/rails plugin install git@github.com:viola/trimmable.git
 
 ==Usage
 
